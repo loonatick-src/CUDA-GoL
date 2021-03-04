@@ -6,17 +6,25 @@ enum BoundaryCondition {
 };
 
 
-enum InitialConditions {
+enum InitialCondition {
     RANDOM,
     CUSTOM
 };
+
+
+typdef struct {
+    // nice 128 bit aligned struct
+    int width;
+    int height;
+    int *elements;
+} Board_t;
 
 
 void
 gameOfLifeBaseline(const dim3 board_width,
         const int number_of_generations,
         BoundaryCondition boundary_condition,
-        InitialConditions initial_condition);
+        Board_t initial_conditions);
 
 /*
 __global__
