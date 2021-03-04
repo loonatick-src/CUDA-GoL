@@ -12,6 +12,7 @@ enum InitialCondition {
 };
 
 
+// the pointer elements can also be a device pointer
 typdef struct {
     // nice 128 bit aligned struct
     int width;
